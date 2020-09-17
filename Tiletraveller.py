@@ -47,11 +47,11 @@ while tile1 != 3 and tile2 !=1:
     e = '(E)ast'
     o = ' or '
     d = '.'
-
+    
     if (tile1,tile2) == (1,1) or (tile1,tile2) == (2,1):
         direction = n + d
-        travel = input(f'You can travel: {direction}':
-        if travel != 'n' travel != 'N':
+        travel = input('You can travel:',direction)
+        if travel != 'n' and travel != 'N':
             print('Not a valid direction!')
             travel = input('You can travel: {}'.format(direction))
             direction = ''
@@ -80,7 +80,7 @@ while tile1 != 3 and tile2 !=1:
     if (tile1,tile2) == (2,1):
         direction = n + d
         travel = input('You can travel: {}'.format(direction))
-        if travel != 'n' travel != 'N':
+        if travel != 'n' and travel != 'N':
             print('Not a valid direction!')
             travel = input('You can travel: {}'.format(direction))
             direction = ''
