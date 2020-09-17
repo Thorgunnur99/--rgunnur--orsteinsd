@@ -66,3 +66,4 @@ if (tile1,tile2) == (2,2):
         print('Not a valid direction!')
         travel = input('You can travel: {}'.format(direction))
         direction = ''
+jfdsljf
