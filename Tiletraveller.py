@@ -1,0 +1,2 @@
+halló
+Print('Halló heimur')
