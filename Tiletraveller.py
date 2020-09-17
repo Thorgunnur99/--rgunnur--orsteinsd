@@ -24,30 +24,30 @@ Tile (3,1) is the victory location.  When the player enters this tile, the progr
 
 Example run:
 """
+
+n = '(N)orth'
+s = '(S)outh'
+w = '(W)est'
+e = '(E)ast'
+o = ' or '
+d = '.'
 tile1 = 1
 tile2 = 1
-
-travel = input('You can travel: (N)orth.')
+travel = ''
 
 while tile1 != 3 and tile2 !=1:
-    if travel == 'n' or travel == 'N' and tile1 != 3 and (tile1,tile2) != (2,2):
+    if travel == 'n' or travel == 'N':
         tile1 += 1
 
-    elif travel == 's' or travel == 'S' and tile1 != 1 and (tile1,tile2) != (2,3):
+    elif travel == 's' or travel == 'S':
         tile1 += -1   
 
-    elif travel == 'e' or travel == 'E' and tile2 != 3 and (tile1,tile2) != (2,2) and    (tile1,tile2) != (2,1):
+    elif travel == 'e' or travel == 'E':
         tile2 += 1
     
-    elif travel == 'w' or travel == 'W' and tile2 != 1 and (tile1,tile2) != (2,1) and    (tile1,tile2) != (3,2):
+    elif travel == 'w' or travel == 'W':
         tile2 += -1
-    n = '(N)orth'
-    s = '(S)outh'
-    w = '(W)est'
-    e = '(E)ast'
-    o = ' or '
-    d = '.'
-    
+        
     if (tile1,tile2) == (1,1) or (tile1,tile2) == (2,1):
         direction = n + d
         travel = input('You can travel:',direction)
@@ -57,6 +57,7 @@ while tile1 != 3 and tile2 !=1:
             direction = ''
         else:
             direction = ''
+            
     if (tile1,tile2) == (1,2):
         direction = n + o + e + o + s + d
         travel = input('You can travel: {}'.format(direction))
