@@ -1,2 +1,4 @@
-halló
-Print('Halló heimur')
+
+print('Halló heimur')
+print('Forritun')
+
